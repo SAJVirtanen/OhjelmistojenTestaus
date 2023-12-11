@@ -17,6 +17,15 @@ describe('toNumber.js', () => {
   it('should return the number Infinity', () => {
     assert.strictEqual(toNumber(Infinity), Infinity);
   }); 
-  
+  it('should return NAN when called with symbol', () => {
+    assert.strictEqual(toNumber(Symbol(1)), NaN);
+  });
+  it('should return NAN when called with object', () => {
+    assert.strictEqual(toNumber({}), NaN);
+  });
+  it('should return 0 when called with empty string', () => {
+    assert.strictEqual(toNumber(''), 0);
+    
+  });
 }
 );

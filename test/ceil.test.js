@@ -12,4 +12,10 @@ describe('ceil', () => {
   it('should return the number 6100', () => {
     expect(ceil(6040, -2)).to.equal(6100);
   }); 
+  it('should return the number -4', () => {
+    expect(ceil(-4.006)).to.equal(-4);
+  });
+  it('should return the number 0.00', () => {
+    expect(ceil(0, 2)).to.equal(0.00);
+  });
 });

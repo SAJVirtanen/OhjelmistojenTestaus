@@ -18,5 +18,11 @@ describe("add", () => {
     it("should return the sum of two numbers with both zeros", () => {
         assert.strictEqual(add(0, 0), 0);
     });
-    
+    it("should return the sum of two numbers with one negative and one zero", () => {
+        assert.strictEqual(add(0, -3), -3);
+    });
+    it("should return the sum of two numbers with one decimal number", () => {
+        assert.strictEqual(add(0.5, 0), 0.5);
+    });
 });
+

@@ -18,11 +18,9 @@ describe("words", () => {
             "pebbles",
         ]);
     });
-    it("should return the words of `string`.", () => {
-        expect(words("fred, barney, & pebbles")).to.deep.equal([
-            "fred",
-            "barney",
-            "pebbles",
-        ]);
+    it("should return typeError when called with integer", () => {
+        assert.throws(() => {
+            words(123);
+        }, TypeError);
     });
 });
